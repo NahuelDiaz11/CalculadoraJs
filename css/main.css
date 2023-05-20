@@ -25,10 +25,13 @@ body{
     padding: 1.5rem;
     border-radius: 1rem;
     gap: .5rem;
+    position: relative;
 
 }
 
-.pantalla{
+#pantalla{
+
+    
    grid-column:1/-1;
    background-color: #090c31;
    padding: 1.5rem;
@@ -39,6 +42,19 @@ body{
    font-family: monospace; 
    font-weight: 600;
 }
+
+#indicadorOperacion {
+  position: absolute;
+  grid-column:1/2;
+ top: 20px;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: left;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  font-family: monospace; 
+
+  }
 
 .btn{
     background-color: #15173c;
@@ -69,3 +85,4 @@ body{
 #igual-hover{
     background-color: #e6394a;
 }
+

@@ -1,18 +1,31 @@
-//muestra la pantalla
-const pantalla = document.querySelector(".pantalla");
-//crea un array con todos los botones
-const botones = document.querySelectorAll(".btn");
+//creo un array con todos los elementos cuya clase sea btn
+const botonesNumeros = Array.from(document.getElementsByClassName('btn'));
+const pantallaElement = document.getElementById('pantalla');
+const botonesOperaciones = Array.from(document.getElementsByClassName('operacion'));
+
+let numeroAnterior;
+
+//funcion flecha que llama a el evento donde se encuentra el numero
+botonesNumeros.forEach(boton => boton.addEventListener("click", (evento) => numeroClickeado(evento.target.textContent) ));
+
+botonesOperaciones.forEach(boton => boton.addEventListener("click", (evento) => operacionClickeada(evento.target.textContent) ));
 
 
+function numeroClickeado(numero){
+    //console.log(numero)
+    //convierte los numeros en decimales
+    pantallaElement.textContent = parseFloat(pantallaElement.textContent + numero);
 
-botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-      
-    const botonApretado= boton.textContent;
+};
 
-    pantalla.textContent=botonApretado;
 
-      
+function operacionClickeada(operacion){
+    
+    if (!numeroAnterior) {
+        numeroAnterior = pantallaElement.textContent;
         
-    })
-})
+    }
+    pantallaElement.textContent = 0;
+    console.log(operacion,numeroAnterior)
+
+}
