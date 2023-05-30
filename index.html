@@ -7,31 +7,58 @@
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-6">
     <div class="calculadora">
         <div id="pantalla">0</div>
        <p id="indicadorOperacion"></p>
-        <button id="c" class="btn">C</button>
+        <button id="clear" class="btn">C</button>
         <button id="borrar" class="btn">←</button>
         <button class="operacion" id="dividido">/</button>
-        <button class="operacion" id="por">*</button>
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
+        <button class="operacion " id="por">*</button>
+        <button class="btn numero" id="siete">7</button>
+        <button class="btn numero" id="ocho">8</button>
+        <button class="btn numero" id="nueve">9</button>
         <button class="operacion" id="menos">-</button>
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
+        <button class="btn numero" id="cuatro">4</button>
+        <button class="btn numero" id="cinco">5</button>
+        <button class="btn numero" id="seis">6</button>
         <button class="operacion" id="mas">+</button>
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button id="igual" class="operacion">=</button>
-        <button id="cero" class="btn">0</button>
+        <button class="btn numero" id="uno">1</button>
+        <button class="btn numero" id="dos">2</button>
+        <button class="btn numero" id="tres">3</button>
+        <button id="igual" class="operacion" id="igual">=</button>
+        <button id="cero numero" class="btn numero" id="cero">0</button>
         <button id="punto">.</button>
+        <button id="allClear" class="btn">A.C</button> 
 
     </div>
+</div>
+
+<div class="col-6">
+    <div class="card">
+        <div class="card-header">
+          Historial de Operaciones
+        </div>
+        <div class="card-body" id="historial">
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+    </div>
+      
+
+   
 
 
  
